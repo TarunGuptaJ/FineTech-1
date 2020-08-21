@@ -1,0 +1,31 @@
+Allocation Policy: The allocation policy implemented is the Best Fit (BF). For example, if a request for 14 bytes is made and if the 
+memory manager currently has a list of unallocated blocks of 16 bytes, 13 bytes, 19 bytes, and 15 bytes blocks. The best-fit strategy 
+will allocate the 14byte in the 15byte block. 
+
+Basic Logic: The two main functions that are implemented are mymalloc and myfree.  
+MyMalloc: As the Best fit allocation policy was to be implemented, the entire memory is to be iterated in order to find the best fit 
+this was found by iterating through the books and checking the value of total – size_requested. Then conditions for checking if there 
+was no space, no space for the book keeping structure and minimal wastage of memory was included. Then every time the memory was 
+allocated the corresponding variables had to be updated and a new book keeping structure had to be initialized at the end to point to 
+the free space available (If bookkeeping space available). 
+
+MyFree: The process of deallocating the memory of a given variable is accomplished by first changing the flag variable to 0 which 
+represents that it is free. Now every time we free a block it has to check the next block and prev block are free in the same order. 
+Now if the next block is free it is merged with the current block that is now the present block has memory of the next and size of the
+book, now the similar check is done with the previous and if it is free the entirety is merged and information is stored in the book. 
+
+Book Keeping Structure: The bookkeeping structure utilized by me is of size 16 bytes, I have used 4 integer variables. The four variables
+are: 
+    1.Flag: This is used for keeping track if the block it refers to are free or allocated. 
+    2.Previous: This variable gives the offset for the start index of the previous block where the memory is allocated. The value of this 
+    is set of –1 is there is no previous book. 
+    3.Next: This variable gives the offset that has to be added to the current books index in order to reach the next book if it is 
+    present, this has a value –1 if there is no next book. 
+    4.Total: The size of the block that has been allocated to the request made. Note: This is a redundant block as the value can be 
+    obtained from prev and next but was utilized for comfort. 
+
+Takeaway:  
+1.While accessing the book structure from the character array it leads to extreme undefined behavior if not explicitly converted.  
+2.Figuring out the right combination for the bookkeeping structure. 
+3.In real life scenario, the efficiency of the memory management system is more important than wastage of memory 
+(minimal acceptable amount)  
