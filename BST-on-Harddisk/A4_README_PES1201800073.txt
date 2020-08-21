@@ -1,0 +1,11 @@
+Write up
+
+Key Takeaway:
+1. It is extremely hard to organize code in a neat manner when trying to solve difficult problems.
+2. Returning more than one value in a function from C is extremely uncomfortable.
+3. At first I had opened my file in r+, w+ mode. It lead to undefined behavious where my code was working fine in Ubuntu and
+   not windows it was because when I input the value 10, it was stored as 13 bytes because of its ASCII conversion. This led me to
+   understand a few of the difference in which ubuntu and windows handle their files.
+
+Additional notes
+Preorder and Inorder prints just '\n' if there are no elements in the BST
