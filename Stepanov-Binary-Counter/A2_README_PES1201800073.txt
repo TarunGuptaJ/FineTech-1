@@ -1,0 +1,22 @@
+Fine Techniques Assignment 2: Write-Up
+
+Data Structure:
+The datastructure that was used for this is the adjacency list that can be explained as a coupling of an array
+of pointers to nodes, and a linked list. That is array of linked lists. 
+The node (Struct node) contains:
+    1.An int variable named data for storing the value
+    2.A self referential pointer that is used for pointing to the next element in the linked list or if the 
+    value is NULL it signifies the end of the linked list in that array. 
+
+Basic Logic: 
+The end result of the implementation is that it should find the second greatest element in log n + n -2 comparisons.
+The basic idea is to obtain the list of all elements that lost to the greatest element of the given array and to 
+iterate through the entirety of the list of elements that lost to the greatest element and returning the maximum of
+the corresponding list. 
+
+The math.h module has been utilized and it needs to be compiled with the -lm flag, because of the requirement to 
+calculate the log2 and ceil to obtain the length of the array of structure pointers for the adjacency list.
+
+Key Takeaway:
+Obtained a clearer view in advantages and disadvantages of using adjacency list over matrices and vice versa.
+Mapping the working of the implementation before coding speeds up the process.

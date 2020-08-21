@@ -1,0 +1,23 @@
+Assignment 3
+Data Structure Used:
+    1. Utilized the doubly linked list for the implementation of the given Assignment. The reason for using Doubly linked list
+    is easy access of the previous node instead of traversing till the end everytime we want to delete the last node.
+
+    2. Used an array of functions that was used for implementing backtracking, each node has a function index that holds information
+    about the last function that was applied and everytime an invalid state was encountered we go to the last node and increment the 
+    function index accordingly in order to arrive at the solution
+
+How to compile your code:
+    No special external header files used
+    Folder structure for compilation
+    Folder
+        --A3_client_PES1201800073.c
+        --A3_header_PES1201800073.c
+        --A3_impl_PES1201800073.c
+    gcc A3_impl_PES1201800073.c A3_client_PES1201800073.c
+    a.exe < input.txt   
+
+Key Takeaway:
+    1. Accomplishing backtracking with explicit stack instead of recursion.
+    2. Understood the actual requirement for writing code across mutliple files.
+    3. Debugging errors across all files.
